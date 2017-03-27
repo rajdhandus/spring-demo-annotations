@@ -2,7 +2,8 @@ package com.raj.spring;
 
 import org.springframework.stereotype.Component;
 
-@Component("theTennisCoach")
+//@Component("theTennisCoach")
+@Component
 public class TennisCoach implements Coach {
 
 	public TennisCoach() {

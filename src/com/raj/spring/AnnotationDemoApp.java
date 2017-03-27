@@ -25,7 +25,9 @@ public class AnnotationDemoApp {
 		// TODO Auto-generated method stub
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Coach theCoach = context.getBean("theTennisCoach", Coach.class);
+		
+		// should follow the naming standard to retrieve the bean as @Component doesn't specific bean id name
+		Coach theCoach = context.getBean("tennisCoach", Coach.class); 
 		
 		System.out.println(theCoach.getWorkoutInfo());
 		
