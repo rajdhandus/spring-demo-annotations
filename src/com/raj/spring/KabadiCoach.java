@@ -19,15 +19,26 @@ public class KabadiCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	
+	public KabadiCoach(){
+		System.out.println("Kabadi : Inside Default Constructor");
+	}
+	
 	@Autowired
-	public KabadiCoach(FortuneService theFortuneService) {
-		// TODO Auto-generated constructor stub
+	public void setFortuneService(FortuneService theFortuneService){
+		System.out.println("Kabadi : Inside the setter method");
 		this.fortuneService = theFortuneService;
 	}
+	
+//	@Autowired
+//	public KabadiCoach(FortuneService theFortuneService) {
+//		// TODO Auto-generated constructor stub
+//		this.fortuneService = theFortuneService;
+//	}
 
 	/* (non-Javadoc)
 	 * @see com.raj.spring.Coach#getWorkoutInfo()
 	 */
+	
 	@Override
 	public String getWorkoutInfo() {
 		// TODO Auto-generated method stub
