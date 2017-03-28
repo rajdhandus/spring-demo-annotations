@@ -27,10 +27,12 @@ public class AnnotationDemoApp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// should follow the naming standard to retrieve the bean as @Component doesn't specific bean id name
-		Coach theCoach = context.getBean("kabadiCoach", Coach.class); 
+		KabadiCoach theCoach = context.getBean("kabadiCoach", KabadiCoach.class); 
 		
 		System.out.println(theCoach.getWorkoutInfo());
 		System.out.println(theCoach.getFortune());
+		System.out.println(theCoach.getTeamName());
+		System.out.println(theCoach.getEmailID());
 		
 		context.close();
 

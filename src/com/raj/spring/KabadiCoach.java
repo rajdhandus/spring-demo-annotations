@@ -5,6 +5,7 @@ package com.raj.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,6 +18,12 @@ public class KabadiCoach implements Coach {
 	/**
 	 * 
 	 */
+	
+	@Value("${foo.email}")
+	private String emailID;
+	
+	@Value("${foo.team}")
+	private String teamName;
 	
 	@Autowired
 	@Qualifier("randomFortuneService")
@@ -56,6 +63,14 @@ public class KabadiCoach implements Coach {
 	public String getFortune() {
 		// TODO Auto-generated method stub
 		return fortuneService.getDailyFortune();
+	}
+	
+	public String getEmailID(){
+		return this.emailID;
+	}
+	
+	public String getTeamName(){
+		return this.teamName;
 	}
 
 }
