@@ -10,5 +10,7 @@ package com.raj.spring;
 public interface Coach {
 	
 	public String getWorkoutInfo();
+	public String getFortune();
+	
 
 }
