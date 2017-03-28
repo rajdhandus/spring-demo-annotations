@@ -18,7 +18,11 @@ public class RandomFortuneService implements FortuneService {
 	 * 
 	 */
 	
-	private String[] fortunes = {"Avoid negative people to stay positive","Do your job to the best of your ability","Be thankful, even if your life is not perfect"};
+	private String[] fortunes = {
+			"Avoid negative people to stay positive",
+			"Do your job to the best of your ability",
+			"Be thankful, even if your life is not perfect"
+			};
 	
 	public RandomFortuneService() {
 		// TODO Auto-generated constructor stub
