@@ -17,17 +17,22 @@ public class KabadiCoach implements Coach {
 	 * 
 	 */
 	
+	@Autowired
 	private FortuneService fortuneService;
 	
 	public KabadiCoach(){
 		System.out.println("Kabadi : Inside Default Constructor");
 	}
 	
-	@Autowired
-	public void setFortuneService(FortuneService theFortuneService){
-		System.out.println("Kabadi : Inside the setter method");
-		this.fortuneService = theFortuneService;
-	}
+	//Setter Injection
+	
+//	@Autowired
+//	public void setFortuneService(FortuneService theFortuneService){
+//		System.out.println("Kabadi : Inside the setter method");
+//		this.fortuneService = theFortuneService;
+//	}
+	
+	// Constructor Injection
 	
 //	@Autowired
 //	public KabadiCoach(FortuneService theFortuneService) {
