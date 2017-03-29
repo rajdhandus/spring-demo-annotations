@@ -1,5 +1,8 @@
 package com.raj.spring;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -19,6 +22,20 @@ public class TennisCoach implements Coach {
 //		// TODO Auto-generated constructor stub
 //		this.fortuneService = theFortuneService;
 //	}
+	
+	public TennisCoach() {
+		System.out.println("Inside default constructor for Tennis Coach");
+}
+	
+	@PostConstruct
+	public void doAfterStartup(){
+		System.out.println("Inside doAfterStartup");
+	}
+	
+	@PreDestroy
+	public void doBeforeDestroy(){
+		System.out.println("Inside doBeforeDestroy");
+	}
 
 	@Override
 	public String getWorkoutInfo() {
