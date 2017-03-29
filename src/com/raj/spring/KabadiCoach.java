@@ -26,7 +26,7 @@ public class KabadiCoach implements Coach {
 	private String teamName;
 	
 	@Autowired
-	@Qualifier("randomFortuneService")
+	@Qualifier("fileFortuneService")
 	private FortuneService fortuneService;
 	
 	public KabadiCoach(){
