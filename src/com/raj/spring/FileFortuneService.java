@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.stereotype.Component;
 
 /**
@@ -28,10 +30,10 @@ public class FileFortuneService implements FortuneService {
 	
 	private String[] fortunes;
 	
-	@SuppressWarnings("unused")
+	@PostConstruct
 	private void readFortunesFromFile(){
+		System.out.println("readFortuneFromFile method invoked");
 		Path file = Paths.get("fortune.txt");
-		
 		Charset charset = Charset.forName("US-ASCII");
 		try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
 		    String line = null;
@@ -47,8 +49,8 @@ public class FileFortuneService implements FortuneService {
 	
 	private int getRandomNumber(){
 		Random myRandom = new Random();
-		readFortunesFromFile();
-		return myRandom.nextInt(fortunes.length);
+		//readFortunesFromFile();
+		return myRandom.nextInt(fortunes.length); // fortunes would have been initialized because of @PostConstruct
 	}
 	
 	public FileFortuneService() {
