@@ -31,7 +31,8 @@ public class SwimJavaConfigDemoApp {
 		
 		System.out.println(theCoach.getWorkoutInfo());
 		System.out.println(theCoach.getFortune());
-
+		System.out.println(theCoach.getEmailID());
+		System.out.println(theCoach.getTeamName());
 		
 		context.close();
 

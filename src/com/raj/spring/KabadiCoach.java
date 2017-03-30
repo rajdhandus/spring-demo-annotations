@@ -45,7 +45,6 @@ public class KabadiCoach implements Coach {
 	
 //	@Autowired
 //	public KabadiCoach(FortuneService theFortuneService) {
-//		// TODO Auto-generated constructor stub
 //		this.fortuneService = theFortuneService;
 //	}
 
